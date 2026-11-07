@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-eco-emerald: #10B981;
+    --color-deep-forest: #059669;
+    --color-bakery-amber: #F59E0B;
+    --color-warm-sand: #FDE68A;
+    --color-off-white: #FAF7F2;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+    background-color: #F8EFE4; /* Warm retro frame tone like sample image */
+    color: #18181B;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8EFE4;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1C5B4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A89B88;
+}
+
